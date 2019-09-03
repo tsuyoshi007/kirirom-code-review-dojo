@@ -17,19 +17,19 @@ function reset () {
   textInput.value = '';
 }
 function addNum () {
-  if ((textInput.value).match(validator)) {
-    textView.textContent = parseInt(textView.textContent) + parseInt(textInput.value);
-    textInput.value = '';
-  } else {
+  if (!(textInput.value).match(validator)) {
     window.alert('Invalid Input');
+    return;
   }
+  textView.textContent = parseInt(textView.textContent) + parseInt(textInput.value);
+  textInput.value = '';
 }
 function subtractNum () {
-  if ((textInput.value).match(validator)) {
-    textView.textContent = parseInt(textView.textContent) - parseInt(textInput.value);
-    textInput.value = '';
-  } else {
+  if (!(textInput.value).match(validator)) {
     window.alert('Invalid Input');
+    return;
   }
+  textView.textContent = parseInt(textView.textContent) - parseInt(textInput.value);
+  textInput.value = '';
 }
 // write code in here
